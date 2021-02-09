@@ -3,7 +3,6 @@ const axios = require('axios')
 
 const brGSalario = x => x.pais == 'Brazil' && x.genero == "M" && x.salario >= 15000
 
-
 axios.get(url).then(response => {
     const funcionarios = response.data
     const brMSalario = funcionarios.filter(brGSalario)
